@@ -1,0 +1,78 @@
+\section{FORMALIZATION OF THE PROBLEM STATEMENT}
+\label{sec:form}
+
+In this paper we conduct a statistically significant comparison of different methods of partitioning a road network graph based on some metrics. This section defines what a road network graph is and presents the formal definition of the metrics in the context of this formal descriptions.
+
+\subsection{The Road Network Graph}
+\label{sec:form-road-netw-grap}
+The road network of a city can be represented by a directed cyclic graph~\cite{holden1995mathematical} $G(V, E)$ where $V$ denotes the vertex set and $E$ denotes the edge set. Every edge $e_{ij} \in E$ in the graph represents a unidirectional road in the city that connects intersection $v_i$ to intersection $v_j$. Every vertex $v_i \in V$ denotes an intersection of two or more roads. A weight $w_{ij}$ is associated with the edge $e_{ij}$ that is representative of the traffic that flows through that road. As discussed in Section~\ref{sec:futu}, we plan on increasing the number of weights that can be associated with every edge to be able to represent the number of lanes, length of the road, importance of the road etc.
+
+\subsection{Partitioning a graph}
+\label{sec:form-part}
+For the sake of completeness of the graph definition, we also assign weights to the vertices denoted by $W_i$, which is defined as follows :
+\begin{equation}
+\label{eq:vertex-weight}
+W_i = \sum\limits_{\forall j \in neighbours(i)} w_{ij}
+\end{equation}
+
+where $neighbours(i)$ is the set of all nodes in $V$ that receive an outgoing edge from $v_i$.
+
+
+\subsection{Formalizing the objective function}
+\label{sec:form-obje-func}
+
+We define a partitioning scheme, $\zeta$ as 
+
+% The total application latency in a parallel setting is the addition of
+% the computation time and the communication
+% time~\cite{ssan05,ajai04}. Given some application node $i \in V_t$
+% mapped to some resource $j \in V_r$. The latency for that node is
+% computed as: $((w^t_1(i)/W^r_1(j)\times w^t_0(i))/W^r_0(c))+
+% (w^e(e)/W^c(c)) | e = (i,k), k \neq i, \forall k \in V_t, c = (j,l), l
+% \neq j, \forall l \in V_r $. In this formulation for some given
+% task graph node $i$, we first calculate the number of vectorized
+% instructions that need to be performed (by diving the required vector
+% length with the vector capacity of the resource node), this gives us the
+% total number of vector instructions that would be performed on the
+% resource node $j$. Next, we multiply the number of vector instructions
+% to be performed by the number of iterative (non-vectorized) instructions
+% required, this in turn gives us the total number of instructions to be
+% performed by that task graph node. Finally, we find the computation
+% latency by dividing this total number of instructions with the MIPS
+% value of the resource vertex. For communication on the other hand, we
+% calculate the communication latency, by dividing the number of required
+% bits to be transferred by the bandwidth of the resource.
+
+% Given the task graph and the resource-graph, let $\zeta$ be all possible
+% mappings of the application on the resource-graph. For a particular
+% mapping $\mathcal{M}$ defined as $\zeta_\mathcal{M}$ on some resource $s
+% \in V_r$ the mapping latency is defined as:
+
+% \begin{equation
+
+%   \begin{array}{c}
+%     Latency^{\zeta_\mathcal{M}}_s = \\
+%     \\
+%     \sum_{\forall i \in V_t \wedge
+%       \zeta_\mathcal{M} = s} ((w^t_1(i)/W^r_1(s)\times w^t_0(i))/W^r_0(c))
+%     \\
+%     +
+%     \\
+%     \sum_{\forall i \in V_t \wedge
+%       \zeta_\mathcal{M} = s} w^e(e) / W^c(c)\\ 
+%     s.t., e = (i,k), k \neq i, \forall k
+%     \in V_t \wedge\  c = (s,l), l \neq s, \forall l \in V_r
+%   \end{array}
+%   \label{eq:1}
+% \end{equation}
+
+% Finally, the complete application latency can then be defined as: 
+% \begin{equation}
+%   \tag{OBJECTIVE\_FUNCTION}
+%   \label{eq:2}
+%   Latency^{\zeta_\mathcal{M}} = max_{s}
+%   ({Latency^{\zeta_\mathcal{M}}_s}), \forall s \in V_t
+% \end{equation}
+
+The objective of our framework is to minimize the total application
+latency as described in Equation~(\ref{eq:2}).

@@ -1,0 +1,37 @@
+\section{Generating the resource graph}
+\label{sec:gener-reso-graph}
+
+
+\begin{figure}[t!]
+  \centering
+  % \includegraphics[scale=0.42]{./figures/jacobi2d}
+  \scalebox{0.38}{\input{./figures/resource_graph.pdf_t}}
+  \caption{An example resource graph}
+  \label{fig:1r}
+\end{figure}
+
+We use synthetically generated graphs to test our framework, because in
+a heterogeneous setup, we do not know the exact nature of the processing
+elements being utilized. For example, a setup might consist of a Tesla
+Nvidia GPU core connected to an Atmel micro-processor. It is also
+possible that a CELL processing unit is connected to a X86 processing
+element. Moreover, we cannot judge beforehand the type of bus
+connections one might have on this multi-core system. In order to
+overcome these issues we take a more statical view of the process. We
+use synthetically generated topologies to test our framework. One such
+synthetically generated resource graph is shown in Figure~\ref{fig:1r}.
+
+In the resource graph in Figure~\ref{fig:1r}, the processing elements
+are denoted via boxes. Each processing element consists of two
+decorations following the previously defined formalism in
+Section~\ref{sec:form-reso-graph}. In Figure~\ref{fig:1r} the processing
+elements are labeled from \texttt{A} through to \texttt{P} and are
+placed in a 2D tiled topology. For processing element \texttt{A} the
+MIPS count is provided as $W^A_0$, while the vector length count is
+provided as $W^A_1$. The bandwidth connecting the various processing
+elements are denoted via $W^c$.
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "bare_conf"
+%%% End: 
