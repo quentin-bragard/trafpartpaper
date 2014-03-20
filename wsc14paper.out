@@ -4,7 +4,12 @@
 \BOOKMARK [2][-]{subsection.3.1}{The Road Network Graph}{section.3}% 4
 \BOOKMARK [2][-]{subsection.3.2}{Partitioning a graph}{section.3}% 5
 \BOOKMARK [2][-]{subsection.3.3}{Formalizing the objective function}{section.3}% 6
-\BOOKMARK [1][-]{section.4}{EXPERIMENTS AND RESULTS}{}% 7
-\BOOKMARK [1][-]{section.5}{FUTURE WORK}{}% 8
-\BOOKMARK [1][-]{section.6}{CONCLUSION}{}% 9
-\BOOKMARK [1][-]{appendix.A}{APPENDICES}{}% 10
+\BOOKMARK [1][-]{section.4}{META HEURISTICS BASED GRAPH PARTITIONING ALGORITHMS}{}% 7
+\BOOKMARK [2][-]{subsection.4.1}{Simulated Annealing}{section.4}% 8
+\BOOKMARK [3][-]{subsubsection.4.1.1}{ \040Optimizations}{subsection.4.1}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Genetic Algorithm}{section.4}% 10
+\BOOKMARK [3][-]{subsubsection.4.2.1}{ \040Genetic Operators}{subsection.4.2}% 11
+\BOOKMARK [1][-]{section.5}{EXPERIMENTS AND RESULTS}{}% 12
+\BOOKMARK [1][-]{section.6}{FUTURE WORK}{}% 13
+\BOOKMARK [1][-]{section.7}{CONCLUSION}{}% 14
+\BOOKMARK [1][-]{appendix.A}{APPENDICES}{}% 15

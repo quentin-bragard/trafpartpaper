@@ -8,4 +8,11 @@ Holden, H., and N.~H. Risebro. 1995.
 \newblock {\em SIAM Journal on Mathematical Analysis\/}~26 (4): 999--1017.
 
 
+\bibitem[\protect\citeauthoryear{Kirkpatrick, Vecchi, et~al.}{Kirkpatrick
+  et~al.}{1983}]{kirkpatrick1983optimization}
+Kirkpatrick, S., M.~Vecchi et~al. 1983.
+\newblock ``Optimization by simmulated annealing''.
+\newblock {\em science\/}~220 (4598): 671--680.
+
+
 \end{thebibliography}

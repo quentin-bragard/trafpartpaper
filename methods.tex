@@ -1,0 +1,97 @@
+\section{META HEURISTICS BASED GRAPH PARTITIONING ALGORITHMS}
+\label{sec:meta}
+
+\subsection{Simulated Annealing}
+\label{sec:simu-anne}
+
+\begin{scriptsize}
+\begin{algorithm}[ht!]
+  % \vspace{-.9cm}
+  \smaller{
+    \caption{The Simulated Annealing Algorithm}
+    \label{algo:SA}
+    % \DontPrintSemicolon
+    \KwIn{Initial Mapping $\zeta_0$ and Starting and Final Temperatures
+$\mathcal{T}_0$, $\mathcal{T}_f$}
+    \KwOut{Best Mapping $\zeta_{best}$}
+    $\zeta_{current} \leftarrow \zeta_0$ \;
+    $C_{current} \leftarrow OBJECTIVE\_FUNCTION(\zeta_0)$;  //calculate initial objective function value\;
+    $\zeta_{best} \leftarrow \zeta_{current}$\;
+    $C_{best} \leftarrow C_{current}$\;
+    \For {$i \leftarrow 0\ to\ \infty$}{
+      $\mathcal{T}_{current} \leftarrow NEXT\_TEMPERATURE(\mathcal{T}_0,i)$\;
+      $\zeta_{new} \leftarrow NEXT\_STATE(\zeta_{current}, \mathcal{T})$\;
+      $C_{new} \leftarrow OBJECTIVE\_FUNCTION(\zeta_{new})$\;
+      $\Delta C \leftarrow C_{new} - C_{current}$\;
+      $r \leftarrow RAND()$\;
+      $p \leftarrow ACCEPTANCE\_PROBABILITY(\Delta C, \mathcal{T}_{current})$\;
+      \If{$\Delta C < 0$ or $r < p$}{
+        \If{$C_{new} < C_{best}$}{
+          $\zeta_{best} \leftarrow \zeta_{new}$;\ $C_{best} \leftarrow
+          C_{new}$;\ $\zeta_{current} \leftarrow \zeta_{new}$;\ $C_{current} \leftarrow C_{new}$\;
+        }
+      }
+      \Else{
+        \If{$\mathcal{T}_{current} \leq \mathcal{T}_f \| executionTime \geq maxTime$}{break}
+      }
+    }
+    \Return $\zeta_{best}$
+  }
+\end{algorithm}
+\end{scriptsize}
+
+Simulated Annealing~\cite{kirkpatrick1983optimization} is an adaptation of the Metropolis-Hastings algorithm for solving the problem of locating a good approximation of the global optimum of a given
+function, $\mathcal{F}: \mathbb{R} \rightarrow \mathbb{R}$, which has a
+large search space. This large number of states, as discussed in Section~\ref{sec:form-part}, makes exhaustive enumeration to find optimal solutions, not feasible. Please note that we will use the term ``vertex'' and ``intersection'' interchangeably.
+
+SA is a heuristic algorithm that explores the search space by inspecting
+one valid state at each iteration. Each of these inspected states are evaluated by an ``objective function'' which tells us how ``good'' or ``bad'' this state is. The ``goodness'' in an SA algorithm is problem dependent and in our case it is given by the metric defined in Equation~\ref{eq:1}, Section~\ref{sec:form-obje-func}. The algorithm progresses by inspecting a candidate state at each iteration and it either accepts it as its current state or discards the state and ``moves'' on to another state. We define a move as the generation of the next candidate state and this progress is governed by a global time-varying parameter called the ``temperature'' which changes based on an ``annealing schedule''.
+
+The algorithm always accepts a move to a better solution, i.e. a new state which has a ``better'' objective function value than the current state. When this value is worse however, the SA algorithm accepts this move with a certain ``acceptance probability'', that changes with the current temperature. When the temperature is high, the algorithm accepts moves to a worse solution with a higher probability; as the temperature reduces over time, this probability decreases as well.
+
+\subsubsection{Optimizations}
+\label{sec:simu-opti}
+ 
+\subsection{Genetic Algorithm}
+\label{sec:gen-algo}
+
+\begin{scriptsize}
+\begin{algorithm}[ht!]
+  % \vspace{-.9cm}
+  \smaller{
+    \caption{The Genetic Algorithm}
+    \label{algo:ga}
+    % \DontPrintSemicolon
+    %\KwIn{Initial Mapping $\zeta_0$ and Starting and Final Temperatures $\mathcal{T}_0$, $\mathcal{T}_f$}
+    %\KwOut{Best Mapping $\zeta_{best}$}
+    Choose an initial random population of individuals\\
+    Evaluate the fitness of the individuals\\
+    \While{Termination criteria not met}{
+      Select the \textit{best} ``n'' individuals to be used by the genetic operators\\
+      Generate new offsprings by using the genetic operators\\
+      Evaluate the objective function value for these offsprings\\
+      Replace the \textit{worst} ``k'' individuals of the current population with the best ``k'' individuals from the offsprings\\
+    }
+  }
+\end{algorithm}
+\end{scriptsize}
+
+Genetic Algorithm is a heuristic search\{cite core paper\} algorithm that mimics the natural selection process. This heuristic algorithm is often used\{cite usage in general context\} for solving optimization problems with large search spaces and it belongs to a larger class called Evolutionary Algorithms.
+
+In the context of the problem at hand, we follow the definition for the search space from Section~\ref{sec:form-part}, as a 2-dimensional space with one axis representing the intersections and the other the partition IDs. Hence each point in the space becomes a \textit{\{intersection,partition\}} pair.
+
+\noindent To characterize a genetic algorithm, we require two things :
+\begin{itemize}
+	\item A \textbf{genetic representation} of the solution space as shown in Figure~\ref{fig:gene-repr}
+	\item An \textbf{objective function} to evaluate solutions as discussed in Equation~\ref{eq:obje-func} from Section~\ref{sec:form-obje-func}
+\end{itemize}
+
+Once this is fixed, we initialize the algorithm by generating a set of random solution vectors and assigning that as the initial population. The initial population size is problem specific and in our case it is **FILLINVALUEFORPOPSIZE**. We have chosen to generate the initial population randomly as opposed to generating it with some seed, to cover a wider range of candidates from our large search space. We then apply a set of genetic operators as discussed in Section~\ref{sec:gene-oper} to generate the next population. This process is repeated and the ``n'' best solutions are retained at every step. We terminate the algorithm once a fixed time has passed by. Algorithm~\ref{algo:ga} gives an algorithmic overview of the above mentioned process.
+
+\subsubsection{Genetic Operators}
+\label{sec:gene-oper}
+Although there are a lot of genetic operators to choose from\{cite core paper and some new papers\}, we employ the \textbf{mutation} and \textbf{crossover} operators for the purpose of this comparison
+\begin{itemize}
+	\item \textbf{mutation} - 
+	\item \textbf{crossover} - 
+\end{itemize}
