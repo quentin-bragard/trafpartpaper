@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.8.12)  20 MAR 2014 01:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.8.12)  26 MAR 2014 18:21
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -121,6 +121,26 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen106
 \Gin@req@width=\dimen107
 )
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip54
+\subfigcapskip=\skip55
+\subfigcaptopadj=\dimen108
+\subfigbottomskip=\skip56
+\subfigcapmargin=\dimen109
+\subfiglabelskip=\skip57
+\c@subfigure=\count89
+\c@lofdepth=\count90
+\c@subtable=\count91
+\c@lotdepth=\count92
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/share/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip58
+\subfig@bottom=\skip59
+)
 (/usr/share/texmf-dist/tex/latex/psnfss/mathptmx.sty
 Package: mathptmx 2005/04/12 PSNFSS-v9.2a Times w/ Math, improved (SPQR, WaS) 
 LaTeX Font Info:    Redeclaring symbol font `operators' on input line 28.
@@ -159,7 +179,7 @@ LaTeX Info: Redefining \hbar on input line 50.
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2013/01/14 v2.14 AMS math features
-\@mathmargin=\skip54
+\@mathmargin=\skip60
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -168,49 +188,49 @@ Package: amstext 2000/06/29 v2.01
 (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks15
-\ex@=\dimen108
+\ex@=\dimen110
 ))
 (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d
-\pmbraise@=\dimen109
+\pmbraise@=\dimen111
 )
 (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 1999/12/14 v2.01 operator names
 )
-\inf@bad=\count89
+\inf@bad=\count93
 LaTeX Info: Redefining \frac on input line 210.
-\uproot@=\count90
-\leftroot@=\count91
+\uproot@=\count94
+\leftroot@=\count95
 LaTeX Info: Redefining \overline on input line 306.
-\classnum@=\count92
-\DOTSCASE@=\count93
+\classnum@=\count96
+\DOTSCASE@=\count97
 LaTeX Info: Redefining \ldots on input line 378.
 LaTeX Info: Redefining \dots on input line 381.
 LaTeX Info: Redefining \cdots on input line 466.
 \Mathstrutbox@=\box26
 \strutbox@=\box27
-\big@size=\dimen110
+\big@size=\dimen112
 LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
-\macc@depth=\count94
-\c@MaxMatrixCols=\count95
+\macc@depth=\count98
+\c@MaxMatrixCols=\count99
 \dotsspace@=\muskip11
-\c@parentequation=\count96
-\dspbrk@lvl=\count97
+\c@parentequation=\count100
+\dspbrk@lvl=\count101
 \tag@help=\toks16
-\row@=\count98
-\column@=\count99
-\maxfields@=\count100
+\row@=\count102
+\column@=\count103
+\maxfields@=\count104
 \andhelp@=\toks17
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
+\eqnshift@=\dimen113
+\alignsep@=\dimen114
+\tagshift@=\dimen115
+\tagwidth@=\dimen116
+\totwidth@=\dimen117
+\lineht@=\dimen118
 \@envbody=\toks18
-\multlinegap=\skip55
-\multlinetaggap=\skip56
+\multlinegap=\skip61
+\multlinetaggap=\skip62
 \mathdisplay@stack=\toks19
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
@@ -232,14 +252,14 @@ Package: amsthm 2004/08/06 v2.20
 \thm@headfont=\toks22
 \thm@notefont=\toks23
 \thm@headpunct=\toks24
-\thm@preskip=\skip57
-\thm@postskip=\skip58
-\thm@headsep=\skip59
+\thm@preskip=\skip63
+\thm@postskip=\skip64
+\thm@headsep=\skip65
 \dth@everypar=\toks25
 )
 (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
 Package: algorithm2e 2013/01/06 v5.00 algorithms environments
-\c@AlgoLine=\count101
+\c@AlgoLine=\count105
 
 (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
@@ -257,37 +277,37 @@ Package `algorithm2e' Release 5.0 -- january 06 2013 --
 subscribe by emailing sympa@lirmm.fr with 'subscribe <list> <firstname name>'
 - Author: Christophe Fiorio (cfiorio@um2.fr)
 ********************************************************
-\skiptotal=\skip60
-\skiplinenumber=\skip61
-\skiprule=\skip62
-\skiphlne=\skip63
-\skiptext=\skip64
-\skiplength=\skip65
-\algomargin=\skip66
-\skipalgocfslide=\skip67
-\algowidth=\dimen117
-\inoutsize=\dimen118
-\inoutindent=\dimen119
-\interspacetitleruled=\dimen120
-\interspacealgoruled=\dimen121
-\interspacetitleboxruled=\dimen122
+\skiptotal=\skip66
+\skiplinenumber=\skip67
+\skiprule=\skip68
+\skiphlne=\skip69
+\skiptext=\skip70
+\skiplength=\skip71
+\algomargin=\skip72
+\skipalgocfslide=\skip73
+\algowidth=\dimen119
+\inoutsize=\dimen120
+\inoutindent=\dimen121
+\interspacetitleruled=\dimen122
+\interspacealgoruled=\dimen123
+\interspacetitleboxruled=\dimen124
 \algocf@inoutbox=\box28
 \algocf@inputbox=\box29
-\AlCapSkip=\skip68
-\AlCapHSkip=\skip69
-\algoskipindent=\skip70
+\AlCapSkip=\skip74
+\AlCapHSkip=\skip75
+\algoskipindent=\skip76
 \algocf@nlbox=\box30
 \algocf@hangingbox=\box31
 \algocf@untilbox=\box32
-\algocf@skipuntil=\skip71
+\algocf@skipuntil=\skip77
 \algocf@capbox=\box33
-\algoheightruledefault=\skip72
-\algoheightrule=\skip73
-\algotitleheightruledefault=\skip74
-\algotitleheightrule=\skip75
-\c@algocfline=\count102
-\c@algocfproc=\count103
-\c@algocf=\count104
+\algoheightruledefault=\skip78
+\algoheightrule=\skip79
+\algotitleheightruledefault=\skip80
+\algotitleheightrule=\skip81
+\c@algocfline=\count106
+\c@algocfproc=\count107
+\c@algocf=\count108
 \algocf@algoframe=\box34
 \algocf@algobox=\box35
 ) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -347,14 +367,14 @@ Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 (/usr/share/texmf-dist/tex/latex/oberdiek/kvoptions.sty
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
-\@linkdim=\dimen123
-\Hy@linkcounter=\count105
-\Hy@pagecounter=\count106
+\@linkdim=\dimen125
+\Hy@linkcounter=\count109
+\Hy@pagecounter=\count110
 
 (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count107
+\Hy@SavedSpaceFactor=\count111
 
 (/usr/share/texmf-dist/tex/latex/latexconfig/hyperref.cfg
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -367,12 +387,12 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-\c@Hy@tempcnt=\count108
+\c@Hy@tempcnt=\count112
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen124
-\Fld@menulength=\count109
-\Field@Width=\dimen125
-\Fld@charsize=\dimen126
+\XeTeXLinkMargin=\dimen126
+\Fld@menulength=\count113
+\Field@Width=\dimen127
+\Fld@charsize=\dimen128
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -382,61 +402,101 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6320.
 Package hyperref Info: PDF/A mode OFF on input line 6325.
 LaTeX Info: Redefining \ref on input line 6365.
 LaTeX Info: Redefining \pageref on input line 6369.
-\Hy@abspage=\count110
-\c@Item=\count111
-\c@Hfootnote=\count112
+\Hy@abspage=\count114
+\c@Item=\count115
+\c@Hfootnote=\count116
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/hpdftex.def
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
-\Fld@listcount=\count113
-\c@bookmark@seq@number=\count114
+\Fld@listcount=\count117
+\c@bookmark@seq@number=\count118
 
 (/usr/share/texmf-dist/tex/latex/oberdiek/rerunfilecheck.sty
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip76
+\Hy@SectionHShift=\skip82
 )
-\c@theorem=\count115
-\c@definition=\count116
+\c@theorem=\count119
+\c@definition=\count120
 
-(./wsc14paper.aux)
+(./wsc14paper.aux
+
+LaTeX Warning: Label `fig:obj2barc' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2barc' multiply defined.
+
+
+LaTeX Warning: Label `fig:obj2kyoto' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2kyoto' multiply defined.
+
+
+LaTeX Warning: Label `fig:obj2san' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2san' multiply defined.
+
+
+LaTeX Warning: Label `fig:obj2cologne' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2cologne' multiply defined.
+
+
+LaTeX Warning: Label `fig:obj2lyon' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2lyon' multiply defined.
+
+
+LaTeX Warning: Label `fig:obj2miami' multiply defined.
+
+
+LaTeX Warning: Label `sub@fig:obj2miami' multiply defined.
+
+
+LaTeX Warning: Label `fig:objective2' multiply defined.
+
+)
 \openout1 = `wsc14paper.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 97.
-LaTeX Font Info:    ... okay on input line 97.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 97.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 98.
+LaTeX Font Info:    ... okay on input line 98.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 98.
  (/usr/share/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/share/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count117
-\scratchdimen=\dimen127
+\scratchcounter=\count121
+\scratchdimen=\dimen129
 \scratchbox=\box36
-\nofMPsegments=\count118
-\nofMParguments=\count119
+\nofMPsegments=\count122
+\nofMParguments=\count123
 \everyMPshowfont=\toks26
-\MPscratchCnt=\count120
-\MPscratchDim=\dimen128
-\MPnumerator=\count121
-\makeMPintoPDFobject=\count122
+\MPscratchCnt=\count124
+\MPscratchDim=\dimen130
+\MPnumerator=\count125
+\makeMPintoPDFobject=\count126
 \everyMPtoPDFconversion=\toks27
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -463,7 +523,7 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-Package hyperref Info: Link coloring ON on input line 97.
+Package hyperref Info: Link coloring ON on input line 98.
 
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
@@ -471,54 +531,54 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count123
+\c@section@level=\count127
 )
-LaTeX Info: Redefining \ref on input line 97.
-LaTeX Info: Redefining \pageref on input line 97.
-LaTeX Info: Redefining \nameref on input line 97.
+LaTeX Info: Redefining \ref on input line 98.
+LaTeX Info: Redefining \pageref on input line 98.
+LaTeX Info: Redefining \nameref on input line 98.
 
 (./wsc14paper.out) (./wsc14paper.out)
 \@outlinefile=\write3
 \openout3 = `wsc14paper.out'.
 
  (./wscbib.tex
-\bibindent=\dimen129
+\bibindent=\dimen131
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 18
-5.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 19
+0.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 18
-5.
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 19
+0.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 18
-5.
+LaTeX Font Info:    Try loading font information for OMS+ztmcm on input line 19
+0.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 18
-5.
+LaTeX Font Info:    Try loading font information for OMX+ztmcm on input line 19
+0.
 
 (/usr/share/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 185.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 190.
 
 (/usr/share/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <8> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 185.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 190.
  (./motivation.tex
 LaTeX Font Info:    Try loading font information for OMS+ptm on input line 9.
 
@@ -532,10 +592,10 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 
 ]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 24.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
 
 
-LaTeX Warning: Reference `eq:2' on page 2 undefined on input line 81.
+LaTeX Warning: Reference `eq:2' on page 2 undefined on input line 64.
 
 ) (./methods.tex
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
@@ -544,53 +604,208 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
- [2]
+ [2] [3]
 
-LaTeX Warning: Reference `eq:1' on page 3 undefined on input line 48.
-
-
-LaTeX Warning: Reference `fig:gene-repr' on page 3 undefined on input line 85.
+LaTeX Warning: Reference `fig:gene-repr' on page 4 undefined on input line 100.
 
 
-LaTeX Warning: Reference `eq:obje-func' on page 3 undefined on input line 86.
 
-[3]) (./experiments.tex) (./future.tex) (./conclusion.tex) (./wsc14paper.bbl)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 295.
+LaTeX Warning: Reference `eq:obje-func' on page 4 undefined on input line 101.
 
-[4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 295.
+) (./experiments.tex
+<./figures/objective1/Barc.pdf, id=129, 361.35pt x 252.945pt>
+File: ./figures/objective1/Barc.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/Barc.pdf>
+Package pdftex.def Info: ./figures/objective1/Barc.pdf used on input line 31.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective1/Kyoto.pdf, id=130, 361.35pt x 252.945pt>
+File: ./figures/objective1/Kyoto.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/Kyoto.pdf>
+Package pdftex.def Info: ./figures/objective1/Kyoto.pdf used on input line 35.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective1/San.pdf, id=131, 361.35pt x 252.945pt>
+File: ./figures/objective1/San.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/San.pdf>
+Package pdftex.def Info: ./figures/objective1/San.pdf used on input line 39.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective1/Cologne.pdf, id=132, 361.35pt x 252.945pt>
+File: ./figures/objective1/Cologne.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/Cologne.pdf>
+Package pdftex.def Info: ./figures/objective1/Cologne.pdf used on input line 43
+.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective1/Lyon.pdf, id=133, 361.35pt x 252.945pt>
+File: ./figures/objective1/Lyon.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/Lyon.pdf>
+Package pdftex.def Info: ./figures/objective1/Lyon.pdf used on input line 47.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective1/Miami.pdf, id=134, 361.35pt x 252.945pt>
+File: ./figures/objective1/Miami.pdf Graphic file (type pdf)
+
+<use ./figures/objective1/Miami.pdf>
+Package pdftex.def Info: ./figures/objective1/Miami.pdf used on input line 51.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+
+LaTeX Warning: Reference `eq:obj1' on page 4 undefined on input line 52.
+
+<./figures/objective2/Barc.pdf, id=135, 361.35pt x 252.945pt>
+File: ./figures/objective2/Barc.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/Barc.pdf>
+Package pdftex.def Info: ./figures/objective2/Barc.pdf used on input line 61.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective2/Kyoto.pdf, id=136, 361.35pt x 252.945pt>
+File: ./figures/objective2/Kyoto.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/Kyoto.pdf>
+Package pdftex.def Info: ./figures/objective2/Kyoto.pdf used on input line 65.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective2/San.pdf, id=137, 361.35pt x 252.945pt>
+File: ./figures/objective2/San.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/San.pdf>
+Package pdftex.def Info: ./figures/objective2/San.pdf used on input line 69.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective2/Cologne.pdf, id=138, 361.35pt x 252.945pt>
+File: ./figures/objective2/Cologne.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/Cologne.pdf>
+Package pdftex.def Info: ./figures/objective2/Cologne.pdf used on input line 73
+.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective2/Lyon.pdf, id=139, 361.35pt x 252.945pt>
+File: ./figures/objective2/Lyon.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/Lyon.pdf>
+Package pdftex.def Info: ./figures/objective2/Lyon.pdf used on input line 77.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective2/Miami.pdf, id=140, 361.35pt x 252.945pt>
+File: ./figures/objective2/Miami.pdf Graphic file (type pdf)
+
+<use ./figures/objective2/Miami.pdf>
+Package pdftex.def Info: ./figures/objective2/Miami.pdf used on input line 81.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+
+LaTeX Warning: Reference `eq:obj2' on page 4 undefined on input line 82.
+
+
+LaTeX Warning: Reference `eq:obj2' on page 4 undefined on input line 82.
+
+<./figures/objective3/Barc.pdf, id=141, 361.35pt x 252.945pt>
+File: ./figures/objective3/Barc.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/Barc.pdf>
+Package pdftex.def Info: ./figures/objective3/Barc.pdf used on input line 91.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective3/Kyoto.pdf, id=142, 361.35pt x 252.945pt>
+File: ./figures/objective3/Kyoto.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/Kyoto.pdf>
+Package pdftex.def Info: ./figures/objective3/Kyoto.pdf used on input line 95.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective3/San.pdf, id=143, 361.35pt x 252.945pt>
+File: ./figures/objective3/San.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/San.pdf>
+Package pdftex.def Info: ./figures/objective3/San.pdf used on input line 99.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective3/Cologne.pdf, id=144, 361.35pt x 252.945pt>
+File: ./figures/objective3/Cologne.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/Cologne.pdf>
+Package pdftex.def Info: ./figures/objective3/Cologne.pdf used on input line 10
+3.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective3/Lyon.pdf, id=145, 361.35pt x 252.945pt>
+File: ./figures/objective3/Lyon.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/Lyon.pdf>
+Package pdftex.def Info: ./figures/objective3/Lyon.pdf used on input line 107.
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+<./figures/objective3/Miami.pdf, id=146, 361.35pt x 252.945pt>
+File: ./figures/objective3/Miami.pdf Graphic file (type pdf)
+
+<use ./figures/objective3/Miami.pdf>
+Package pdftex.def Info: ./figures/objective3/Miami.pdf used on input line 111.
+
+(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+
+
+LaTeX Warning: Reference `eq:obj3' on page 4 undefined on input line 112.
+
+
+LaTeX Warning: Reference `eq:obj3' on page 4 undefined on input line 112.
+
+) (./future.tex [4] [5 <./figures/objective1/Barc.pdf> <./figures/objective1/Ky
+oto.pdf> <./figures/objective1/San.pdf> <./figures/objective1/Cologne.pdf> <./f
+igures/objective1/Lyon.pdf> <./figures/objective1/Miami.pdf>] [6 <./figures/obj
+ective2/Barc.pdf> <./figures/objective2/Kyoto.pdf> <./figures/objective2/San.pd
+f> <./figures/objective2/Cologne.pdf> <./figures/objective2/Lyon.pdf> <./figure
+s/objective2/Miami.pdf>]) (./conclusion.tex) [7 <./figures/objective3/Barc.pdf>
+ <./figures/objective3/Kyoto.pdf> <./figures/objective3/San.pdf> <./figures/obj
+ective3/Cologne.pdf> <./figures/objective3/Lyon.pdf> <./figures/objective3/Miam
+i.pdf>] (./wsc14paper.bbl)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
+ [8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
  (./wsc14paper.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 295.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 295.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `wsc14paper.out' has not changed.
-(rerunfilecheck)             Checksum: A86238A2E6A3B5DFBDF502F26A943498;967.
+(rerunfilecheck)             Checksum: A3EEA65C944FD444DCF25F87A53C81C1;1417.
 
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 295.
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  ) 
 Here is how much of TeX's memory you used:
- 7925 strings out of 493315
- 111694 string characters out of 6143704
- 223185 words of memory out of 5000000
- 11175 multiletter control sequences out of 15000+600000
- 44065 words of font info for 108 fonts, out of 8000000 for 9000
+ 8247 strings out of 493315
+ 117593 string characters out of 6143704
+ 232893 words of memory out of 5000000
+ 11437 multiletter control sequences out of 15000+600000
+ 48059 words of font info for 116 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 33i,17n,47p,809b,526s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,17n,47p,872b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
-msy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
-></usr/share/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-di
-st/fonts/type1/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/symbo
-l/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/
-texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/
-urw/times/utmri8a.pfb>
-Output written on wsc14paper.pdf (4 pages, 99228 bytes).
+ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/t
+exmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1
+/urw/symbol/usyr.pfb></usr/share/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></u
+sr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fon
+ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on wsc14paper.pdf (8 pages, 215116 bytes).
 PDF statistics:
- 155 PDF objects out of 1000 (max. 8388607)
- 137 compressed objects within 2 object streams
- 32 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 341 PDF objects out of 1000 (max. 8388607)
+ 281 compressed objects within 3 object streams
+ 68 named destinations out of 1000 (max. 500000)
+ 251 words of extra memory for PDF output out of 10000 (max. 10000000)
 

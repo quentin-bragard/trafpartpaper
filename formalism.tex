@@ -1,7 +1,7 @@
 \section{FORMALIZATION OF THE PROBLEM STATEMENT}
 \label{sec:form}
 
-In this paper we conduct a statistically significant comparison of different methods of partitioning a road network graph based on some metrics. This section defines what a road network graph is and presents the formal definition of the metrics.
+In this paper we conduct a comparison of different methods of partitioning a road network graph based on some metrics. This section defines what a road network graph is and presents the formal definition of the metrics.
 
 \subsection{The Road Network Graph}
 \label{sec:form-road-netw-grap}
@@ -15,67 +15,50 @@ For the sake of completeness of the graph definition, we also assign weights to 
 W_i = \sum\limits_{\forall j \in neighbours(i)} w_{ij}
 \end{equation}
 
-\noindent where $neighbours(i)$ is the set of all nodes in $V$ that receive an outgoing edge from $v_i$. We define a partitioning scheme on the given road network $G$, $\zeta_G$ as a function that maps every node $v_i$ from the road network graph to a partition.
-\begin{equation}
-\label{eq:part-sche}
-\zeta_G(v_i) \in \{0,\dots,p\}, \forall v_i \in V
-\end{equation}
+\noindent where $neighbours(i)$ is the set of all nodes in $V$ that receive an outgoing edge from $v_i$. 
 
-\noindent The problem of partitioning a graph has a 2 dimensional space, where one axis represents the node ID(representing the intersection) and the other represents the partition ID. Each point in this 2-D space represents an \textit{\{intersection,partition\}} pair which implies this intersection is mapped onto this partition. We define a ``state'' to be a collection of $|V|$ points such that each intersection is mapped to exactly one partition. The total number of possible ``states'' in this discrete space is $|V|^{p}$, where $p$ is the number of required partitions.
+The problem of partitioning a graph has a 2 dimensional space, where one axis represents the node ID(representing the intersection) and the other represents the partition ID. Each point in this 2-D space represents an \textit{\{intersection,partition\}} pair which implies this intersection is mapped onto this partition. We define a ``state'' to be a collection of $|V|$ points such that each intersection is mapped to exactly one partition. The total number of possible ``states'' in this discrete space is $|V|^{p}$, where $p$ is the number of required partitions.
 
 \subsection{Formalizing the objective function}
 \label{sec:form-obje-func}
 
-% The total application latency in a parallel setting is the addition of
-% the computation time and the communication
-% time~\cite{ssan05,ajai04}. Given some application node $i \in V_t$
-% mapped to some resource $j \in V_r$. The latency for that node is
-% computed as: $((w^t_1(i)/W^r_1(j)\times w^t_0(i))/W^r_0(c))+
-% (w^e(e)/W^c(c)) | e = (i,k), k \neq i, \forall k \in V_t, c = (j,l), l
-% \neq j, \forall l \in V_r $. In this formulation for some given
-% task graph node $i$, we first calculate the number of vectorized
-% instructions that need to be performed (by diving the required vector
-% length with the vector capacity of the resource node), this gives us the
-% total number of vector instructions that would be performed on the
-% resource node $j$. Next, we multiply the number of vector instructions
-% to be performed by the number of iterative (non-vectorized) instructions
-% required, this in turn gives us the total number of instructions to be
-% performed by that task graph node. Finally, we find the computation
-% latency by dividing this total number of instructions with the MIPS
-% value of the resource vertex. For communication on the other hand, we
-% calculate the communication latency, by dividing the number of required
-% bits to be transferred by the bandwidth of the resource.
+To effectively perform a distributed road network simulation, one must fully understand the effects of dividing the workload(the road network graph to be simulated) into the required number of partitions. To this end, we define three heuristics\{cite papers\} that are widely accepted in the community, to measure the effectiveness of a ``partitioning scheme''. 
 
-% Given the task graph and the resource-graph, let $\zeta$ be all possible
-% mappings of the application on the resource-graph. For a particular
-% mapping $\mathcal{M}$ defined as $\zeta_\mathcal{M}$ on some resource $s
-% \in V_r$ the mapping latency is defined as:
+We define a partitioning scheme on the given road network $G$, $\lambda_G \in \Lambda_G$(where $\Lambda_G$ is the set of all possible partitioning schemes of the given graph $G$ onto $p$ partitions) as a function that maps every node $v_i$ from the road network graph to a partition. Please note that we will use the terms ``node'', ``vertex'' and ``intersection'' interchangeably.
+\begin{equation}
+\label{eq:part-sche}
+\lambda_G(v_i) \in \{P_0,\dots,P_{p-1}\}, \forall v_i \in V
+\end{equation}
 
-% \begin{equation
+\noindent where $P_i$ denotes the $i^{th}$ partition. For the following discussion we denote the weight of the $i^{th}$ partition($P_i$) as $w(P_i)$.
 
-%   \begin{array}{c}
-%     Latency^{\zeta_\mathcal{M}}_s = \\
-%     \\
-%     \sum_{\forall i \in V_t \wedge
-%       \zeta_\mathcal{M} = s} ((w^t_1(i)/W^r_1(s)\times w^t_0(i))/W^r_0(c))
-%     \\
-%     +
-%     \\
-%     \sum_{\forall i \in V_t \wedge
-%       \zeta_\mathcal{M} = s} w^e(e) / W^c(c)\\ 
-%     s.t., e = (i,k), k \neq i, \forall k
-%     \in V_t \wedge\  c = (s,l), l \neq s, \forall l \in V_r
-%   \end{array}
-%   \label{eq:1}
-% \end{equation}
+\subsubsection{Metric 1 : Evenness}
 
-% Finally, the complete application latency can then be defined as: 
-% \begin{equation}
-%   \tag{OBJECTIVE\_FUNCTION}
-%   \label{eq:2}
-%   Latency^{\zeta_\mathcal{M}} = max_{s}
-%   ({Latency^{\zeta_\mathcal{M}}_s}), \forall s \in V_t
-% \end{equation}
+\begin{equation}
+\label{eq:metric1-mean}
+\lambda_G^\mu = \frac{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} w(P_i)}{p}
+\end{equation}
+
+\begin{equation}
+\label{eq:metric1}
+\lambda_G^\sigma = \frac{\sqrt{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} (w(P_i) - \lambda_G^\mu)^2}}{p}
+\end{equation}
+
+
+
+\subsubsection{Metric 2 : Inter-Partition Communication}
+\begin{equation}
+\label{eq:metric2}
+\lambda_G^{comm} = \sum\limits_{i \in \{v_0,\dots,v_{|V|-1}\}}{\sum\limits_{j \in \{v_0,\dots,v_{|V|-1}\}}{w(e_{ij})}} , s.t. \lambda_G(i) \neq \lambda_G(j)
+\end{equation}
+
+\subsubsection{Metric 3 : Heaviest Partition}
+\begin{equation}
+\label{eq:metric3}
+\lambda_G^{max} = max(w(P_i)), \forall P_i \in \{P_0,\dots,P_{p-1}\}
+\end{equation}
+
+As discussed previously, the importance of these metrics vary hugely depending on the underlying architecture onto which these partitions are mapped onto and hence we present the metrics without probing their relative importance.
 
 The objective of our framework is to minimize the total application
 latency as described in Equation~(\ref{eq:2}).

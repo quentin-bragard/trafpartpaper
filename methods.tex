@@ -11,47 +11,62 @@
     \caption{The Simulated Annealing Algorithm}
     \label{algo:SA}
     % \DontPrintSemicolon
-    \KwIn{Initial Mapping $\zeta_0$ and Starting and Final Temperatures
+    \KwIn{Initial Mapping $\lambda_0$ and Starting and Final Temperatures
 $\mathcal{T}_0$, $\mathcal{T}_f$}
-    \KwOut{Best Mapping $\zeta_{best}$}
-    $\zeta_{current} \leftarrow \zeta_0$ \;
-    $C_{current} \leftarrow OBJECTIVE\_FUNCTION(\zeta_0)$;  //calculate initial objective function value\;
-    $\zeta_{best} \leftarrow \zeta_{current}$\;
+    \KwOut{Best Mapping $\lambda_{best}$}
+    $\lambda_{current} \leftarrow \lambda_0$ \;
+    $C_{current} \leftarrow objective\_function(\lambda_0)$;  //calculate initial objective function value\;
+    $\lambda_{best} \leftarrow \lambda_{current}$\;
     $C_{best} \leftarrow C_{current}$\;
     \For {$i \leftarrow 0\ to\ \infty$}{
-      $\mathcal{T}_{current} \leftarrow NEXT\_TEMPERATURE(\mathcal{T}_0,i)$\;
-      $\zeta_{new} \leftarrow NEXT\_STATE(\zeta_{current}, \mathcal{T})$\;
-      $C_{new} \leftarrow OBJECTIVE\_FUNCTION(\zeta_{new})$\;
+      $\mathcal{T}_{current} \leftarrow next\_temperature(\mathcal{T}_0,i)$\;
+      $\lambda_{new} \leftarrow move(\lambda_{current}, \mathcal{T})$\;
+      $C_{new} \leftarrow objective\_function(\lambda_{new})$\;
       $\Delta C \leftarrow C_{new} - C_{current}$\;
-      $r \leftarrow RAND()$\;
-      $p \leftarrow ACCEPTANCE\_PROBABILITY(\Delta C, \mathcal{T}_{current})$\;
+      $p \leftarrow acceptance\_probability(\Delta C, \mathcal{T}_{current})$\;
       \If{$\Delta C < 0$ or $r < p$}{
         \If{$C_{new} < C_{best}$}{
-          $\zeta_{best} \leftarrow \zeta_{new}$;\ $C_{best} \leftarrow
-          C_{new}$;\ $\zeta_{current} \leftarrow \zeta_{new}$;\ $C_{current} \leftarrow C_{new}$\;
+          $\lambda_{best} \leftarrow \lambda_{new}$;\ $C_{best} \leftarrow
+          C_{new}$;\ 
+          $\lambda_{current} \leftarrow \lambda_{new}$;\ $C_{current} \leftarrow C_{new}$\;
         }
       }
       \Else{
         \If{$\mathcal{T}_{current} \leq \mathcal{T}_f \| executionTime \geq maxTime$}{break}
       }
     }
-    \Return $\zeta_{best}$
+    \Return $\lambda_{best}$
   }
 \end{algorithm}
 \end{scriptsize}
 
 Simulated Annealing~\cite{kirkpatrick1983optimization} is an adaptation of the Metropolis-Hastings algorithm for solving the problem of locating a good approximation of the global optimum of a given
 function, $\mathcal{F}: \mathbb{R} \rightarrow \mathbb{R}$, which has a
-large search space. This large number of states, as discussed in Section~\ref{sec:form-part}, makes exhaustive enumeration to find optimal solutions, not feasible. Please note that we will use the term ``vertex'' and ``intersection'' interchangeably.
+large search space. This large number of states, as discussed in Section~\ref{sec:form-part}, makes exhaustive enumeration to find optimal solutions, not feasible.
 
-SA is a heuristic algorithm that explores the search space by inspecting
-one valid state at each iteration. Each of these inspected states are evaluated by an ``objective function'' which tells us how ``good'' or ``bad'' this state is. The ``goodness'' in an SA algorithm is problem dependent and in our case it is given by the metric defined in Equation~\ref{eq:1}, Section~\ref{sec:form-obje-func}. The algorithm progresses by inspecting a candidate state at each iteration and it either accepts it as its current state or discards the state and ``moves'' on to another state. We define a move as the generation of the next candidate state and this progress is governed by a global time-varying parameter called the ``temperature'' which changes based on an ``annealing schedule''.
+SA is a heuristic algorithm that explores the search space by inspecting one valid state at each iteration. Each of these inspected states are evaluated by an ``objective function'' which tells us how ``good'' or ``bad'' this state is. The ``goodness'' in an SA algorithm is problem dependent and in our case it is given by the metrics defined in Section~\ref{sec:form-obje-func}. The algorithm progresses by inspecting a candidate state at each iteration and it either accepts it as its current state or discards the state and ``moves'' on to another state. We define a move as the generation of the next candidate states and this progress is governed by a global time-varying parameter called the ``temperature'' which changes based on an ``annealing schedule''.
 
 The algorithm always accepts a move to a better solution, i.e. a new state which has a ``better'' objective function value than the current state. When this value is worse however, the SA algorithm accepts this move with a certain ``acceptance probability'', that changes with the current temperature. When the temperature is high, the algorithm accepts moves to a worse solution with a higher probability; as the temperature reduces over time, this probability decreases as well.
 
-\subsubsection{Optimizations}
-\label{sec:simu-opti}
- 
+ Every Simulated Annealing method is characterized by the definition of its core functions and parameters. One such core function is the ``move'' function which defines how the next candidate state is generated. We formally define a this function as,
+
+\begin{equation}
+\label{eq:move-func}
+move(\lambda_G, \mathcal{T}) =  \lambda_G^{'}
+\end{equation}
+
+\noindent where $\lambda_G^{'}$ is a new partitioning scheme which also maps each intersection to exactly one partition. The move function takes as input the current partitioning scheme $\lambda_G$ and the current temperature and describes how the generation of $\lambda_G^{'}$ is done. In this paper we present a few variations of the SA algorithm, in terms of the ``move'' as follows.
+
+\subsubsection{Standard Move}
+\label{sec:opti-std}
+Conventional wisdom suggests that all move functions should be random 
+
+\subsubsection{Global Edge Labelling}
+\label{sec:opti-glob-edge}
+
+\subsubsection{Local Edge Labelling}
+\label{sec:opti-loca-edge}
+
 \subsection{Genetic Algorithm}
 \label{sec:gen-algo}
 
@@ -62,8 +77,8 @@ The algorithm always accepts a move to a better solution, i.e. a new state which
     \caption{The Genetic Algorithm}
     \label{algo:ga}
     % \DontPrintSemicolon
-    %\KwIn{Initial Mapping $\zeta_0$ and Starting and Final Temperatures $\mathcal{T}_0$, $\mathcal{T}_f$}
-    %\KwOut{Best Mapping $\zeta_{best}$}
+    %\KwIn{Initial Mapping $\lambda_0$ and Starting and Final Temperatures $\mathcal{T}_0$, $\mathcal{T}_f$}
+    %\KwOut{Best Mapping $\lambda_{best}$}
     Choose an initial random population of individuals\\
     Evaluate the fitness of the individuals\\
     \While{Termination criteria not met}{
@@ -86,7 +101,7 @@ In the context of the problem at hand, we follow the definition for the search s
 	\item An \textbf{objective function} to evaluate solutions as discussed in Equation~\ref{eq:obje-func} from Section~\ref{sec:form-obje-func}
 \end{itemize}
 
-Once this is fixed, we initialize the algorithm by generating a set of random solution vectors and assigning that as the initial population. The initial population size is problem specific and in our case it is **FILLINVALUEFORPOPSIZE**. We have chosen to generate the initial population randomly as opposed to generating it with some seed, to cover a wider range of candidates from our large search space. We then apply a set of genetic operators as discussed in Section~\ref{sec:gene-oper} to generate the next population. This process is repeated and the ``n'' best solutions are retained at every step. We terminate the algorithm once a fixed time has passed by. Algorithm~\ref{algo:ga} gives an algorithmic overview of the above mentioned process.
+Once this is fixed, we initialize the algorithm by generating a set of random solution vectors and assigning that as the initial population. The initial population size is problem specific and in our case it is 400 which is sufficiently a large sample and small enough to ensure fast generation of offsprings. We have chosen to generate the initial population randomly as opposed to generating it with some seed, to cover a wider range of candidates from our large search space. We then apply a set of genetic operators as discussed in Section~\ref{sec:gene-oper} to generate the next population. This process is repeated and the ``n'' best solutions are retained at every step. We terminate the algorithm once a fixed time has passed by. Algorithm~\ref{algo:ga} gives an algorithmic overview of the above mentioned process.
 
 \subsubsection{Genetic Operators}
 \label{sec:gene-oper}
