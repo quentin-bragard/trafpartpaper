@@ -15,4 +15,12 @@ Kirkpatrick, S., M.~Vecchi et~al. 1983.
 \newblock {\em science\/}~220 (4598): 671--680.
 
 
+\bibitem[\protect\citeauthoryear{Orsila, Kangas, Salminen, and
+  Hamalainen}{Orsila et~al.}{2006}]{orsila2006parameterizing}
+Orsila, H., T.~Kangas, E.~Salminen, and T.~D. Hamalainen. 2006.
+\newblock ``Parameterizing simulated annealing for distributing task graphs on
+  multiprocessor SoCs''.
+\newblock In {\em System-on-Chip, 2006. International Symposium on},  1--4.
+\newblock IEEE.
+
 \end{thebibliography}
