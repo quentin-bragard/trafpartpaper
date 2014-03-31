@@ -1,3 +1,72 @@
+\section{SPACE PARTITIONING}
+\label{sec:spacePart}
+
+\subsection{TwoTree partitioning}
+
+TwoTree partitioning algorithm is a really simple and naive space partitioning algorithm. The algorithm consists in continuously dividing the space and subspaces in two until each regions are under an arbitrary threshold or it reaches the number of regions requested. After a division, the algorithm will look for the biggest region existing and divide it in two. The division will be done horizontally and vertically alternatively. Once the division scheme is complete, the algorithm will determine in which region belong the vertices using their GPS coordinates. The algorithm forms quickly rectangular-shaped regions with few neighbours and a small perimeters.
+
+\subsection{Smart QuadTree partitioning}
+
+Smart QuadTree (SQT) works with two different phases: \textit{Division} and \textit{Gathering}. The method \textit{Division} consists in dividing the space into the smallest tiles possible by partitioning each subspace in four equal subspaces according to their GPS coordinates. The second method, \textit{Gathering} will, then, use a region growing technique to recreate the region. First, one seed per regions requested, is chosen among the tiles according the predefined heuristics (in our case, hierarchical level of the roads present on the tile). Then one after another, regions will aggregate neighbours tiles until they cannot grow any longer due to the boundaries of the graph or the boundaries of other regions. The algorithm forms complex-shaped regions optimising the load-balancing of the system.
+
+\section{TRAFFIC ROAD PARTITIONING: SPARTSIM}
+\label{sec:spartsim}
+
+SParTSim works as a multi-level region growing road network partitioning.
+We start by choosing specific intersections which will be act as seeds, then let the regions growing by aggregating vertices around the region. All regions are growing concurrently until they reach the boundaries of neighbouring regions. 
+
+SParTSim works in three step: \textit{Growing}, \textit{Trading} and \textit{Connecting}. Algorithm \ref{algo:spartsim} presents in lines 6-11 the growing method. The function \verb+BestCandidateVertex+, presented line 4, uses predefined heuristics (natural bridges, highest road hierarchy, degree of the vertex) to choose the best seed for a region. Our current work uses only the degree of the vertex assuming that more cars go through vertices with highest degree. However, we are currently doing works on data analysis to identify more accurately what could be the best seed. Then, function \verb+Grow+ (line 9) takes care of the growing part of SParTSim. The method gathers the vertices on the outside border of the partition $\gamma_i$ and rank them according to the hierarchical level of the road segment, the length of the segment, and whether this neighbour already belongs to this partition, to another partition or has not been selected yet. By default, the algorithm always picks the segment with the highest hierarchical level and uses the other criteria to decide between two equivalent segments. However the criteria can be weighted to optimise the partitioning according to the scenario. The method \verb+Grow+ stops when no region is able to grow any longer. After \verb+Grow+, the method \verb+Trade+ allows the regions to exchange vertices in order to load-balance the partitioning as much as possible. Exchange are made between overloaded regions and under-loaded regions and conducted through the shortest path between the two regions. This method will run until the partitioning reaches an acceptable level of unbalance. On the downside, \verb+Trade+ may introduce unconnected sub-partition belonging to the same region. The last part of the algorithm tries to recreate the connectivity at the price of some load-balance. First \verb+ComputeConnectedSubgraphs+ (line 21) computes all connected sub-partition in each region. Then, \verb+Attach+ (line 23) aggregate the sub-partition until we reach the number of region requested while trying to keep the best load-balance possible.
+
+\begin{scriptsize}
+\begin{algorithm}[ht!]
+\SetKwInOut{Input}{input}
+\SetKwInOut{Output}{output}
+\Input{A road network $G=(V,A,w)$; $n$ the number of partitions wanted; $\epsilon$ an acceptable unbalance of the partitioning.}
+\Output{$\pi(G,n)$ a road network partitioning.}
+\BlankLine
+\Begin{
+\tcp{Initialisation}
+$\overrightarrow{stop} \leftarrow$ new array of size $n$\; 
+\For{$i\leftarrow 1$ \KwTo $n$}{
+$\gamma_i \leftarrow$ BestCandidateVertex()\;
+$\overrightarrow{stop}[i] \leftarrow 1$\;
+}
+\tcp{Grow regions till they are blocked}
+\While{$\overrightarrow{stop} \neq \vec{\emptyset}$}{
+\For{$i\leftarrow 1$ \KwTo $n$}{
+\If{$\overrightarrow{stop}[i] \neq 0$} {
+hasGrown $\leftarrow$ Grow($\gamma_i$)\;
+\If{hasGrown}{
+$\overrightarrow{stop}[i] \leftarrow 0$
+}
+}
+}
+}
+\tcp{Trade segments to balance partitioning}
+balanced$\leftarrow$ false\;
+
+\While{$\lnot$ balanced $\lor$ enough iterations}{
+\tcp{min and max in terms of partition size}
+$\gamma_i=\max \pi(G,n)$\;
+$\gamma_j=\min \pi(G,n)$\;
+\eIf{$|\gamma_i[V]|-\epsilon < \frac{|G[V]|}{n} < |\gamma_j[V]|+\epsilon$}{
+balanced $\leftarrow$ true\;
+}{
+Trade($\gamma_i$, $\gamma_j$)\;
+}
+}
+\tcp{Ensure connectivity}
+\ForEach{$\gamma_i$}{
+ComputeConnectedSubgraphs($\gamma_i$)\;
+}
+\ForEach{connected component $cc_{\gamma_i}^j$}{
+Attach($cc_{\gamma_i}^j$)\;
+}
+}
+\caption{\label{algo:spartsim}SParTSim}
+\end{algorithm}
+\end{scriptsize}
+
 \section{META HEURISTICS BASED GRAPH PARTITIONING ALGORITHMS}
 \label{sec:meta}
 
