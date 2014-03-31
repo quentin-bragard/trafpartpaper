@@ -73,10 +73,10 @@ Attach($cc_{\gamma_i}^j$)\;
 \subsection{Simulated Annealing}
 \label{sec:simu-anne}
 
-\begin{scriptsize}
+% \begin{scriptsize}
 \begin{algorithm}[ht!]
   % \vspace{-.9cm}
-  \smaller{
+  % \smaller{
     \caption{The Simulated Annealing Algorithm}
     \label{algo:SA}
     % \DontPrintSemicolon
@@ -105,9 +105,9 @@ $\mathcal{T}_0$, $\mathcal{T}_f$}
       }
     }
     \Return $\lambda_{best}$
-  }
+  % }
 \end{algorithm}
-\end{scriptsize}
+% \end{scriptsize}
 
 Simulated Annealing~\cite{kirkpatrick1983optimization} is an adaptation of the Metropolis-Hastings algorithm for solving the problem of locating a good approximation of the global optimum of a given
 function, $\mathcal{F}: \mathbb{R} \rightarrow \mathbb{R}$, which has a
@@ -128,21 +128,60 @@ move(\lambda_G, \mathcal{T}) =  \lambda_G^{'}
 
 \subsubsection{Standard Move}
 \label{sec:opti-std}
-Conventional wisdom suggests that all move functions should be random 
+Conventional wisdom~\cite{orsila2006parameterizing} suggests that the move function has to be random to avoid local minimums. Hence, our baseline is this conventionally accepted notion of moving about the search space through random neighbours. For each intersection in the road network graph, we choose a random partition to assign it to as follows,
+\begin{equation}
+\label{eq:std-move}
+\lambda_G^{'}(v_i) = rand(0, p-1), \forall v_i \in V
+\end{equation}
+\noindent The results of this method is labelled as \textbf{SA-standard} in the graphs in the results section.
 
-\subsubsection{Global Edge Labelling}
+\subsubsection{Edge Labelling}
 \label{sec:opti-glob-edge}
+As mentioned previously in section~\ref{sec:form-obje-func}, the execution time of a distributed simulation depends on the amount of inter-partition communication. To address this, we label edges as \textbf{heavy} or \textbf{light} by virtue of their edge weights as compared to the ``rest of the edges' weights". Given a subset of edges $E_S, S \subseteq G$ we define the following metrices that we will use in our two edge labelling methods.
 
-\subsubsection{Local Edge Labelling}
-\label{sec:opti-loca-edge}
+\begin{equation}
+\label{eq:comm1-mean}
+E_S^\mu = \frac{\sum\limits_{e_i \in \{E_S\}} w(e_i)}{|E_S|}
+\end{equation}
+
+\begin{equation}
+\label{eq:comm1}
+E_S^\sigma = \frac{\sqrt{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} (w(P_i) - E_S^\mu)^2}}{p}
+\end{equation}
+
+\begin{algorithm}[ht!]
+  % \vspace{-.9cm}
+%  \smaller{
+    \caption{Edge labelling}
+    \label{algo:ga}
+    % \DontPrintSemicolon
+    %\KwIn{Initial Mapping $\lambda_0$ and Starting and Final Temperatures $\mathcal{T}_0$, $\mathcal{T}_f$}
+    %\KwOut{Best Mapping $\lambda_{best}$}
+    Calculate $E_S^\mu$ and $E_S^\sigma$ for the given $E_S$\\
+    \For{$e_i \in E_S$}{
+      \If{$w(e_i)-E_S^\mu \geq k*E_S^\sigma$}
+      { label($e_i$) = heavy }
+      \Else
+      { label($e_i$) = light }
+    }
+ % }
+\end{algorithm}
+
+For every edge in the edge set, we check if it is ``k" sigmas away from the mean. If it is, then we label it as a heavy edge and do not allow it cross across partitions. For instance, if the edge weight of edge $e_{ij}$(between vertices $v_i$ and $v_j$) is ``k" sigmas away from the mean $E_S^\mu$, then we move vertex $j$ to the partition to which $i$ belongs to or more formally we denote it by $\lambda_G^{'}(v_j) = \lambda_G{'}(v_i)$ thereby minimizing the inter-partition communication. Since this edge labelling algorithm works for any subset $S \in G$, we define the following two flavours of the move function.
+
+\begin{itemize}
+\item \textbf{Global Edge Labelling} - In this method, we set the subset $S$ to be the entire graph $G$ itself. This gives an idea of how varied the edges are in a global setting and helps to identify the critical pieces of roads that contain a lot of traffic flowing through them. The results of this method is labelled as \textbf{SA-stats} in the graphs in the results section.
+\item \textbf{Local Edge Labelling} - In contrast to the global edge labelling method, we define $S$ as the subset of vertices from the graph that are connected to some vertex $v_i$. This identifies what the most critical edges are for any given intersection and we perturb the current solution only on vertex at a time. The results of this method is labelled as \textbf{SA-all-optimizations} in the graphs in the results section.
+\end{itemize}
 
 \subsection{Genetic Algorithm}
 \label{sec:gen-algo}
 
-\begin{scriptsize}
+Genetic Algorithm is a heuristic search\{cite core paper\} algorithm that mimics the natural selection process. This heuristic algorithm is often used\{cite usage in general context\} for solving optimization problems with large search spaces and it belongs to a larger class called Evolutionary Algorithms.
+
 \begin{algorithm}[ht!]
   % \vspace{-.9cm}
-  \smaller{
+%  \smaller{
     \caption{The Genetic Algorithm}
     \label{algo:ga}
     % \DontPrintSemicolon
@@ -156,15 +195,10 @@ Conventional wisdom suggests that all move functions should be random
       Evaluate the objective function value for these offsprings\\
       Replace the \textit{worst} ``k'' individuals of the current population with the best ``k'' individuals from the offsprings\\
     }
-  }
+ % }
 \end{algorithm}
-\end{scriptsize}
 
-Genetic Algorithm is a heuristic search\{cite core paper\} algorithm that mimics the natural selection process. This heuristic algorithm is often used\{cite usage in general context\} for solving optimization problems with large search spaces and it belongs to a larger class called Evolutionary Algorithms.
-
-In the context of the problem at hand, we follow the definition for the search space from Section~\ref{sec:form-part}, as a 2-dimensional space with one axis representing the intersections and the other the partition IDs. Hence each point in the space becomes a \textit{\{intersection,partition\}} pair.
-
-\noindent To characterize a genetic algorithm, we require two things :
+In the context of the problem at hand, we follow the definition for the search space from Section~\ref{sec:form-part}, as a 2-dimensional space with one axis representing the intersections and the other the partition IDs. Hence each point in the space becomes a \textit{\{intersection,partition\}} pair. Under this definition of the search space, to characterize a genetic algorithm, we require two things :
 \begin{itemize}
 	\item A \textbf{genetic representation} of the solution space as shown in Figure~\ref{fig:gene-repr}
 	\item An \textbf{objective function} to evaluate solutions as discussed in Equation~\ref{eq:obje-func} from Section~\ref{sec:form-obje-func}

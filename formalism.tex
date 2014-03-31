@@ -30,37 +30,30 @@ We define a partitioning scheme on the given road network $G$, $\lambda_G \in \L
 \lambda_G(v_i) \in \{P_0,\dots,P_{p-1}\}, \forall v_i \in V
 \end{equation}
 
-\noindent where $P_i$ denotes the $i^{th}$ partition. For the following discussion we denote the weight of the $i^{th}$ partition($P_i$) as $w(P_i)$.
-
-\subsubsection{Metric 1 : Evenness}
-
-\begin{equation}
-\label{eq:metric1-mean}
-\lambda_G^\mu = \frac{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} w(P_i)}{p}
-\end{equation}
+\noindent where $P_i$ denotes the $i^{th}$ partition. For the following discussion we denote the weight of the $i^{th}$ partition($P_i$) as $w(P_i)$. One of the primary objectives of road network partitioning for distributed simulation is to minimize the execution time of the simulation time. To this end, we aim to minimize the weight of the \textbf{heaviest partition($\lambda_G^{max}$)} as described by the following equation,
 
 \begin{equation}
 \label{eq:metric1}
-\lambda_G^\sigma = \frac{\sqrt{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} (w(P_i) - \lambda_G^\mu)^2}}{p}
+\lambda_G^{max} = max(w(P_i)), \forall P_i \in \{P_0,\dots,P_{p-1}\}
 \end{equation}
 
+\noindent The execution time of a distributed simulation also depends on the amount of \textbf{inter-partition communication}($\lambda_G^{comm}$). In order to reduce this inter-partition communication, we minimize the following metric,
 
-
-\subsubsection{Metric 2 : Inter-Partition Communication}
 \begin{equation}
 \label{eq:metric2}
 \lambda_G^{comm} = \sum\limits_{i \in \{v_0,\dots,v_{|V|-1}\}}{\sum\limits_{j \in \{v_0,\dots,v_{|V|-1}\}}{w(e_{ij})}} , s.t. \lambda_G(i) \neq \lambda_G(j)
 \end{equation}
 
-\subsubsection{Metric 3 : Heaviest Partition}
+\noindent The final metric that we consider is the \textbf{evenness}($\lambda_G^\sigma$) of the partitions. In a scenario in which the underlying architecture consists of homogeneous execution units(i.e. a vertex of the road network graph takes equally long to simulate on any machine in the underlying architecture) and where communication plays a less significant role(i.e. powerful communication backbone), this metric plays a very important role as it defines how varied each machine is loaded.
+
 \begin{equation}
-\label{eq:metric3}
-\lambda_G^{max} = max(w(P_i)), \forall P_i \in \{P_0,\dots,P_{p-1}\}
+\label{eq:metric3-mean}
+\lambda_G^\mu = \frac{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} w(P_i)}{p}
 \end{equation}
 
-As discussed previously, the importance of these metrics vary hugely depending on the underlying architecture onto which these partitions are mapped onto and hence we present the metrics without probing their relative importance.
+\begin{equation}
+\label{eq:metric3}
+\lambda_G^\sigma = \frac{\sqrt{\sum\limits_{P_i \in \{P_0,\dots,P_{p-1}\}} (w(P_i) - \lambda_G^\mu)^2}}{p}
+\end{equation}
 
-The objective of our framework is to minimize the total application
-latency as described in Equation~(\ref{eq:2}).
-
-In the next section, we present an overview of the methods that are compared under the purview of road network partitioning.
+\noindent The importance of these metrics vary hugely depending on the underlying architecture onto which these partitions are mapped onto and hence we present the metrics without probing into their relative importance. In the next section, we present an overview of the methods that are compared under the purview of road network partitioning.

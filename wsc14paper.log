@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.8.12)  26 MAR 2014 18:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Arch Linux) (format=pdflatex 2013.8.12)  31 MAR 2014 16:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -426,6 +426,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 
 (./wsc14paper.aux
 
+LaTeX Warning: Label `algo:ga' multiply defined.
+
+
 LaTeX Warning: Label `fig:obj2barc' multiply defined.
 
 
@@ -593,188 +596,170 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10.95> not available
 ]
 LaTeX Font Info:    Font shape `OMS/ptm/m/it' in size <10.95> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+)
+(./methods.tex [2] [3] [4]
 
-
-LaTeX Warning: Reference `eq:2' on page 2 undefined on input line 64.
-
-) (./methods.tex
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 15.
- [2] [3]
-
-LaTeX Warning: Reference `fig:gene-repr' on page 4 undefined on input line 100.
+LaTeX Warning: Reference `fig:gene-repr' on page 5 undefined on input line 134.
 
 
 
-LaTeX Warning: Reference `eq:obje-func' on page 4 undefined on input line 101.
+LaTeX Warning: Reference `eq:obje-func' on page 5 undefined on input line 135.
 
 ) (./experiments.tex
-<./figures/objective1/Barc.pdf, id=129, 361.35pt x 252.945pt>
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
+ [5]
+<./figures/objective1/Barc.pdf, id=131, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/Barc.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/Barc.pdf>
-Package pdftex.def Info: ./figures/objective1/Barc.pdf used on input line 31.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective1/Barc.pdf used on input line 30.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective1/Kyoto.pdf, id=130, 361.35pt x 252.945pt>
+<./figures/objective1/Kyoto.pdf, id=132, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/Kyoto.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/Kyoto.pdf>
-Package pdftex.def Info: ./figures/objective1/Kyoto.pdf used on input line 35.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective1/Kyoto.pdf used on input line 34.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective1/San.pdf, id=131, 361.35pt x 252.945pt>
+<./figures/objective1/San.pdf, id=133, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/San.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/San.pdf>
-Package pdftex.def Info: ./figures/objective1/San.pdf used on input line 39.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective1/San.pdf used on input line 38.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective1/Cologne.pdf, id=132, 361.35pt x 252.945pt>
+<./figures/objective1/Cologne.pdf, id=134, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/Cologne.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/Cologne.pdf>
-Package pdftex.def Info: ./figures/objective1/Cologne.pdf used on input line 43
+Package pdftex.def Info: ./figures/objective1/Cologne.pdf used on input line 42
 .
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective1/Lyon.pdf, id=133, 361.35pt x 252.945pt>
+<./figures/objective1/Lyon.pdf, id=135, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/Lyon.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/Lyon.pdf>
-Package pdftex.def Info: ./figures/objective1/Lyon.pdf used on input line 47.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective1/Lyon.pdf used on input line 46.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective1/Miami.pdf, id=134, 361.35pt x 252.945pt>
+<./figures/objective1/Miami.pdf, id=136, 351.3125pt x 245.91875pt>
 File: ./figures/objective1/Miami.pdf Graphic file (type pdf)
 
 <use ./figures/objective1/Miami.pdf>
-Package pdftex.def Info: ./figures/objective1/Miami.pdf used on input line 51.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective1/Miami.pdf used on input line 50.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-
-LaTeX Warning: Reference `eq:obj1' on page 4 undefined on input line 52.
-
-<./figures/objective2/Barc.pdf, id=135, 361.35pt x 252.945pt>
+<./figures/objective2/Barc.pdf, id=138, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/Barc.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/Barc.pdf>
-Package pdftex.def Info: ./figures/objective2/Barc.pdf used on input line 61.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective2/Barc.pdf used on input line 60.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective2/Kyoto.pdf, id=136, 361.35pt x 252.945pt>
+<./figures/objective2/Kyoto.pdf, id=139, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/Kyoto.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/Kyoto.pdf>
-Package pdftex.def Info: ./figures/objective2/Kyoto.pdf used on input line 65.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective2/Kyoto.pdf used on input line 64.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective2/San.pdf, id=137, 361.35pt x 252.945pt>
+<./figures/objective2/San.pdf, id=140, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/San.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/San.pdf>
-Package pdftex.def Info: ./figures/objective2/San.pdf used on input line 69.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective2/San.pdf used on input line 68.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective2/Cologne.pdf, id=138, 361.35pt x 252.945pt>
+<./figures/objective2/Cologne.pdf, id=141, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/Cologne.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/Cologne.pdf>
-Package pdftex.def Info: ./figures/objective2/Cologne.pdf used on input line 73
+Package pdftex.def Info: ./figures/objective2/Cologne.pdf used on input line 72
 .
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective2/Lyon.pdf, id=139, 361.35pt x 252.945pt>
+<./figures/objective2/Lyon.pdf, id=142, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/Lyon.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/Lyon.pdf>
-Package pdftex.def Info: ./figures/objective2/Lyon.pdf used on input line 77.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective2/Lyon.pdf used on input line 76.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective2/Miami.pdf, id=140, 361.35pt x 252.945pt>
+<./figures/objective2/Miami.pdf, id=143, 351.3125pt x 245.91875pt>
 File: ./figures/objective2/Miami.pdf Graphic file (type pdf)
 
 <use ./figures/objective2/Miami.pdf>
-Package pdftex.def Info: ./figures/objective2/Miami.pdf used on input line 81.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective2/Miami.pdf used on input line 80.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-
-LaTeX Warning: Reference `eq:obj2' on page 4 undefined on input line 82.
-
-
-LaTeX Warning: Reference `eq:obj2' on page 4 undefined on input line 82.
-
-<./figures/objective3/Barc.pdf, id=141, 361.35pt x 252.945pt>
+<./figures/objective3/Barc.pdf, id=146, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/Barc.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/Barc.pdf>
-Package pdftex.def Info: ./figures/objective3/Barc.pdf used on input line 91.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective3/Barc.pdf used on input line 90.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective3/Kyoto.pdf, id=142, 361.35pt x 252.945pt>
+<./figures/objective3/Kyoto.pdf, id=147, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/Kyoto.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/Kyoto.pdf>
-Package pdftex.def Info: ./figures/objective3/Kyoto.pdf used on input line 95.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective3/Kyoto.pdf used on input line 94.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective3/San.pdf, id=143, 361.35pt x 252.945pt>
+<./figures/objective3/San.pdf, id=148, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/San.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/San.pdf>
-Package pdftex.def Info: ./figures/objective3/San.pdf used on input line 99.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective3/San.pdf used on input line 98.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective3/Cologne.pdf, id=144, 361.35pt x 252.945pt>
+<./figures/objective3/Cologne.pdf, id=149, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/Cologne.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/Cologne.pdf>
 Package pdftex.def Info: ./figures/objective3/Cologne.pdf used on input line 10
-3.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+2.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective3/Lyon.pdf, id=145, 361.35pt x 252.945pt>
+<./figures/objective3/Lyon.pdf, id=150, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/Lyon.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/Lyon.pdf>
-Package pdftex.def Info: ./figures/objective3/Lyon.pdf used on input line 107.
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
+Package pdftex.def Info: ./figures/objective3/Lyon.pdf used on input line 106.
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
 
-<./figures/objective3/Miami.pdf, id=146, 361.35pt x 252.945pt>
+<./figures/objective3/Miami.pdf, id=151, 351.3125pt x 245.91875pt>
 File: ./figures/objective3/Miami.pdf Graphic file (type pdf)
 
 <use ./figures/objective3/Miami.pdf>
-Package pdftex.def Info: ./figures/objective3/Miami.pdf used on input line 111.
+Package pdftex.def Info: ./figures/objective3/Miami.pdf used on input line 110.
 
-(pdftex.def)             Requested size: 361.34912pt x 252.94438pt.
-
-
-LaTeX Warning: Reference `eq:obj3' on page 4 undefined on input line 112.
-
-
-LaTeX Warning: Reference `eq:obj3' on page 4 undefined on input line 112.
-
-) (./future.tex [4] [5 <./figures/objective1/Barc.pdf> <./figures/objective1/Ky
-oto.pdf> <./figures/objective1/San.pdf> <./figures/objective1/Cologne.pdf> <./f
-igures/objective1/Lyon.pdf> <./figures/objective1/Miami.pdf>] [6 <./figures/obj
-ective2/Barc.pdf> <./figures/objective2/Kyoto.pdf> <./figures/objective2/San.pd
-f> <./figures/objective2/Cologne.pdf> <./figures/objective2/Lyon.pdf> <./figure
-s/objective2/Miami.pdf>]) (./conclusion.tex) [7 <./figures/objective3/Barc.pdf>
- <./figures/objective3/Kyoto.pdf> <./figures/objective3/San.pdf> <./figures/obj
-ective3/Cologne.pdf> <./figures/objective3/Lyon.pdf> <./figures/objective3/Miam
-i.pdf>] (./wsc14paper.bbl)
+(pdftex.def)             Requested size: 351.31163pt x 245.91814pt.
+) (./future.tex) (./conclusion.tex)
+[6 <./figures/objective1/Barc.pdf> <./figures/objective1/Kyoto.pdf> <./figures/
+objective1/San.pdf> <./figures/objective1/Cologne.pdf> <./figures/objective1/Ly
+on.pdf> <./figures/objective1/Miami.pdf>] (./wsc14paper.bbl [7 <./figures/objec
+tive2/Barc.pdf> <./figures/objective2/Kyoto.pdf> <./figures/objective2/San.pdf>
+ <./figures/objective2/Cologne.pdf> <./figures/objective2/Lyon.pdf> <./figures/
+objective2/Miami.pdf> <./figures/objective3/Barc.pdf> <./figures/objective3/Kyo
+to.pdf> <./figures/objective3/San.pdf> <./figures/objective3/Cologne.pdf> <./fi
+gures/objective3/Lyon.pdf> <./figures/objective3/Miami.pdf>])
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 300.
  [8]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 300.
- (./wsc14paper.aux)
+
+(./wsc14paper.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 300.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 300.
 Package rerunfilecheck Info: File `wsc14paper.out' has not changed.
-(rerunfilecheck)             Checksum: A3EEA65C944FD444DCF25F87A53C81C1;1417.
+(rerunfilecheck)             Checksum: 1A208A198A6C986DF69A3680B33811F4;1046.
 
 
 LaTeX Warning: There were undefined references.
@@ -785,13 +770,13 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 300.
  ) 
 Here is how much of TeX's memory you used:
- 8247 strings out of 493315
- 117593 string characters out of 6143704
- 232893 words of memory out of 5000000
- 11437 multiletter control sequences out of 15000+600000
- 48059 words of font info for 116 fonts, out of 8000000 for 9000
+ 8235 strings out of 493315
+ 117466 string characters out of 6143704
+ 230096 words of memory out of 5000000
+ 11430 multiletter control sequences out of 15000+600000
+ 43680 words of font info for 108 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 33i,17n,47p,872b,525s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 33i,17n,47p,872b,437s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/publi
 c/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/
@@ -802,10 +787,10 @@ exmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texmf-dist/fonts/type1
 sr/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texmf-dist/fon
 ts/type1/urw/times/utmr8a.pfb></usr/share/texmf-dist/fonts/type1/urw/times/utmr
 i8a.pfb>
-Output written on wsc14paper.pdf (8 pages, 215116 bytes).
+Output written on wsc14paper.pdf (8 pages, 244722 bytes).
 PDF statistics:
- 341 PDF objects out of 1000 (max. 8388607)
- 281 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
- 251 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 374 PDF objects out of 1000 (max. 8388607)
+ 294 compressed objects within 3 object streams
+ 70 named destinations out of 1000 (max. 500000)
+ 219 words of extra memory for PDF output out of 10000 (max. 10000000)
 

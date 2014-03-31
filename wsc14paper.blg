@@ -3,44 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: wsc14paper.aux
 The style file: wsc.bst
 Database file #1: references.bib
-You've used 2 entries,
+You've used 3 entries,
             2956 wiz_defined-function locations,
-            645 strings with 5296 characters,
-and the built_in function-call counts, 1551 in all, are:
-= -- 140
-> -- 113
-< -- 0
-+ -- 36
-- -- 38
-* -- 144
-:= -- 274
-add.period$ -- 6
-call.type$ -- 2
-change.case$ -- 12
-chr.to.int$ -- 2
-cite$ -- 2
-duplicate$ -- 34
-empty$ -- 92
-format.name$ -- 46
-if$ -- 293
+            652 strings with 5539 characters,
+and the built_in function-call counts, 2474 in all, are:
+= -- 216
+> -- 191
+< -- 1
++ -- 60
+- -- 62
+* -- 230
+:= -- 432
+add.period$ -- 10
+call.type$ -- 3
+change.case$ -- 20
+chr.to.int$ -- 3
+cite$ -- 3
+duplicate$ -- 62
+empty$ -- 146
+format.name$ -- 74
+if$ -- 478
 int.to.chr$ -- 1
 int.to.str$ -- 0
-missing$ -- 2
-newline$ -- 15
-num.names$ -- 20
-pop$ -- 8
+missing$ -- 3
+newline$ -- 21
+num.names$ -- 30
+pop$ -- 20
 preamble$ -- 1
-purify$ -- 26
+purify$ -- 41
 quote$ -- 0
-skip$ -- 41
+skip$ -- 65
 stack$ -- 0
-substring$ -- 95
-swap$ -- 10
-text.length$ -- 0
+substring$ -- 131
+swap$ -- 21
+text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 48
+type$ -- 72
 warning$ -- 0
-while$ -- 20
+while$ -- 29
 width$ -- 0
-write$ -- 30
+write$ -- 47
